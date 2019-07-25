@@ -1,6 +1,6 @@
 INSTRUCCIONES:
 
-1. En el archivo secrets.json, que se encuentra en drive, establecer los datos de su base de datos local. Cambiar el valor "ENGINE": con: "django_tenants.postgresql_backend", poner el archivo secrets.json a la misma altura de settings.py
+1. En el archivo secrets.json, que se encuentra en drive, establecer los datos de su base de datos local. Poner el archivo secrets.json a la misma altura de settings.py
 
 
 

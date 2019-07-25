@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('arduino/', include('apps.arduino.urls', namespace='arduino')),
     path('users/', include('apps.users.urls', namespace='users')),
+    path('roles/', include('apps.roles.urls', namespace='roles')),
 ]

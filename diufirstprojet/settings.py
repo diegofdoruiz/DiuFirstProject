@@ -36,6 +36,7 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
     'apps.users',
+    'apps.roles',
     'apps.arduino',
     'django.contrib.admin',
     'django.contrib.auth',

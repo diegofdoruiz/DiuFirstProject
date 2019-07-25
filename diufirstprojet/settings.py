@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-
+import json
 from json import loads
 json_file = open('diufirstprojet/secrets.json').read()
 JSON_CONFIG_FILE = loads(json_file)
@@ -37,6 +37,7 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 INSTALLED_APPS = [
     'apps.users',
     'apps.arduino',
+    'apps.questions',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

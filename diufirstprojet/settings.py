@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-
+import json
 from json import loads
 json_file = open('diufirstprojet/secrets.json').read()
 JSON_CONFIG_FILE = loads(json_file)
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'apps.users',
     'apps.roles',
     'apps.arduino',
+    'apps.questions',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -86,6 +87,9 @@ DATABASES = JSON_CONFIG_FILE['DATABASES']
 
 AUTH_USER_MODEL = "users.User" 
 
+LOGIN_URL = '/login'
+
+LOGIN_REDIRECT_URL='/'
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators

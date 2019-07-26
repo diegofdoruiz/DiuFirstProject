@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from apps.tarjetas.models import Personaje, Tarjeta
 
 
-class PersonajeForm(UserCreationForm):
+class PersonajeForm(forms.ModelForm):
     class Meta:
         model = Personaje
         fields = (

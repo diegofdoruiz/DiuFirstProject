@@ -87,6 +87,9 @@ DATABASES = JSON_CONFIG_FILE['DATABASES']
 
 AUTH_USER_MODEL = "users.User" 
 
+LOGIN_URL = '/login'
+
+LOGIN_REDIRECT_URL='/'
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators

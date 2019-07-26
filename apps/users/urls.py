@@ -1,6 +1,7 @@
 from django.urls import path
 from .views import *
 from apps.users.views import UserListView, UserDeleteView, UserDetailView
+from django.contrib.auth.views import LoginView, LogoutView, PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordChangeView, PasswordResetCompleteView
 
 app_name = 'users'
 urlpatterns = [
@@ -9,4 +10,5 @@ urlpatterns = [
 	path('<int:pk>', UserDetailView.as_view(), name='detail'),
 	path('edit/<int:pk>', edit, name='edit'),
 	path('delete/<int:pk>', UserDeleteView.as_view(), name='delete')
+	# path('login/', LoginView.as_view(template_name='login.html'), name="login"),
 ]

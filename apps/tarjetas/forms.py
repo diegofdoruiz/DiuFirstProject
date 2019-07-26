@@ -3,18 +3,18 @@ from django.contrib.auth.forms import UserCreationForm
 from apps.tarjetas.models import Personaje, Tarjeta
 
 
-class PersonajeForm(UserCreationForm):
+class PersonajeForm(forms.ModelForm):
     class Meta:
         model = Personaje
         fields = (
-        	'name'
-            'info') 
+        	'nombre_personaje',
+            'info_personaje') 
         labels=  {
-        'name': 'Nombre de Personaje',
-        'info': 'Información de Personaje',
+        'nombre_personaje': 'Nombre de Personaje',
+        'info_personaje': 'Información de Personaje',
         }
         widgets = {
-            'name': forms.TextInput(attrs={'class':'form-control'}),
-            'info': forms.TextInput(attrs={'class':'form-control'})
+            'nombre_personaje': forms.TextInput(attrs={'class':'form-control'}),
+            'info_personaje': forms.TextInput(attrs={'class':'form-control'})
 
         }

@@ -35,6 +35,7 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'apps.tarjetas',
     'apps.users',
     'apps.roles',
     'apps.arduino',
@@ -46,7 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap4',
-    'apps.tarjetas',
+    
 ]
 
 MIDDLEWARE = [

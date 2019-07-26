@@ -15,11 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.auth.views import LoginView, LogoutView, PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordChangeView, PasswordResetCompleteView
+from django.views.generic import TemplateView
 
 urlpatterns = [
+    path('', TemplateView.as_view(template_name='home.html'), name='home'),
     path('admin/', admin.site.urls),
     path('arduino/', include('apps.arduino.urls', namespace='arduino')),
     path('users/', include('apps.users.urls', namespace='users')),
     path('roles/', include('apps.roles.urls', namespace='roles')),
     path('questions/', include('apps.questions.urls', namespace='questions')),
+    path('login/', LoginView.as_view(template_name='login.html'), name="login"),
+    path('logout/', LogoutView.as_view(template_name='home.html'), name="logout"),
 ]

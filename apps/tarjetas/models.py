@@ -5,9 +5,8 @@ from django.core.validators import MinLengthValidator
 class Personaje(models.Model): 
     
     nombre_personaje= models.CharField(max_length=20, validators=[MinLengthValidator(6, 'Mínimo 6 carateres.')])
-    audio_personaje= models.CharField(max_length=30)
     info_personaje= models.TextField(max_length= 200, validators=[MinLengthValidator(6, 'Mínimo 6 carateres.')])
-    ##TODO: Agregar las preguntas asociadas al personale
+    ##TODO: Agregar las preguntas asociadas al personaje y audios
 
 
 class Tarjeta(models.Model): 

@@ -6,6 +6,6 @@ from apps.tarjetas.views import PersonajeCreateView, PersonajeUpdateVIew, Person
 	path('', PersonajeListView.as_view(), name='personajes'),
 	path('create/', PersonajeCreteView.as_view(), name='create'),
 	path('<int:pk>', PersonajeDetailView.as_view(), name='detail'),
-	path('edit/<int:pk>', PersojeUpdateView().as_view(), name='edit'),
+	path('edit/<int:pk>', PersonajeUpdateView().as_view(), name='edit'),
 	path('delete/<int:pk>',PersonajeDeleteView.as_view(), name='delete'),
 ]

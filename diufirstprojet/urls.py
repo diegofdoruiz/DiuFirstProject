@@ -25,6 +25,8 @@ urlpatterns = [
     path('users/', include('apps.users.urls', namespace='users')),
     path('roles/', include('apps.roles.urls', namespace='roles')),
     path('questions/', include('apps.questions.urls', namespace='questions')),
+    path('personaje/', include('apps.tarjetas.urls', namespace= 'tarjetas')),
     path('login/', LoginView.as_view(template_name='login.html'), name="login"),
     path('logout/', LogoutView.as_view(template_name='home.html'), name="logout"),
+    
 ]
